@@ -1,0 +1,68 @@
+digraph {
+	node00 [label="Root
+ state: s0" color=lightblue shape=box style=filled]
+	node0 [label="node00
+ UCB: 0
+ Value Upper: 1.6333333333333329" color=lightblue shape=box]
+	node00 -> node00
+	node0 [label="node01
+ UCB: 0
+ Value Upper: 1.6333333333333329" color=lightblue shape=box]
+	node01 -> node00
+	node0 [label="node02
+ UCB: 0
+ Value Upper: 1.6333333333333329" color=lightblue shape=box]
+	node02 -> node00
+	node0 [label="node03
+ UCB: 0
+ Value Upper: 1.6333333333333329" color=lightblue shape=box]
+	node03 -> node00
+	node0 [label="node04
+ UCB: 0
+ Value Upper: 1.6333333333333329" color=lightblue shape=box]
+	node04 -> node00
+	node0 [label="node05
+ UCB: 0
+ Value Upper: 1.6333333333333329" color=lightblue shape=box]
+	node05 -> node00
+	node0 [label="node06
+ UCB: 0
+ Value Upper: 1.6333333333333329" color=lightblue shape=box]
+	node06 -> node00
+	node0 [label="node07
+ UCB: 0.1331367476297156
+ Value Upper: 1.7664700809630487" color=lightblue shape=box]
+	node07 -> node00
+	node1 [label="node10
+ UCB: 0.6321210972701408
+ Value Upper: 0.6321210972701408" color=lightblue shape=box]
+	node10 -> node07
+	node1 [label="node11
+ UCB: 0.6321210972701408
+ Value Upper: 0.6321210972701408" color=lightblue shape=box]
+	node11 -> node07
+	node1 [label="node12
+ UCB: 0.6321210972701408
+ Value Upper: 0.6321210972701408" color=lightblue shape=box]
+	node12 -> node07
+	node1 [label="node13
+ UCB: 0.6321210972701408
+ Value Upper: 0.6321210972701408" color=lightblue shape=box]
+	node13 -> node07
+	node1 [label="node14
+ UCB: 0.6321210972701408
+ Value Upper: 0.6321210972701408" color=lightblue shape=box]
+	node14 -> node07
+	node1 [label="node15
+ UCB: 0.6321210972701408
+ Value Upper: 0.6321210972701408" color=lightblue shape=box]
+	node15 -> node07
+	node1 [label="node16
+ UCB: 0.6321210972701408
+ Value Upper: 0.6321210972701408" color=lightblue shape=box]
+	node16 -> node07
+	node1 [label="node17
+ UCB: 0
+ Value Upper: 2.333333333333333" color=lightblue shape=box]
+	node17 -> node07
+}

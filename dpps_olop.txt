@@ -1,0 +1,55 @@
+
+let episode M = argmax_{M} (M log(M)/(2log(1/gamma)) <= n )
+horizon = [Mlog(M)/(2log(1/gamma))]
+
+
+Algorithm 1: (estimates for each node, just compute  value upper bound)
+
+for episode in m = 1,.., M do:  
+     // traversal 
+     node = root 
+      for t in 1,...,h:
+	      if node is leaf:
+           // expand 
+           c = random({c : c \in child})// choose random action 
+         else:
+           c = argmax_{c \in child} (value_upper(c))
+	      action = node -> c 
+	      reward = step(action)
+	      node = c
+      
+      // backup to root and update posterior 
+      update_posterior(node)
+      mu_node = bayesian_boostrap(node)
+      update_upper_value // back up 
+      
+      
+      
+
+Algorithm 2 (estimate for each node, compute upper value for sequence)
+
+Set_N = {}
+set_L = {}
+
+for episode in 1, ..., M
+    // sampling posterior 
+    if set_N != {}:
+       for node in set_N:
+	   // Dirichlet Process Posterior Sampling
+	   D_node ~ P_node( \alpha + T_{node}, n/(\alpha + n) Fn+ \alpha(\alpha + n)F0) 
+	   // Bayesian Boostrap  
+           compute  mu  =  Bayesian_Boostrap(D_node) (+ upper bound UCB1 OR KL-UCB)    
+    
+    // compute upper sequence value 
+     sequence_value = BFS(Set_N) // using breath first search to compute 
+   
+    a^{h} = argmax_{s}(sequence value)
+    
+
+    // simulate the best sequence 
+    for t in 1,...,h:
+       a^{t}
+    rollout a^{m} \in a^{h}A^{L - |a^{h}|}
+    
+   
+
